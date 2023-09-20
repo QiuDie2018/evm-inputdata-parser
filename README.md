@@ -1,5 +1,5 @@
 # evm-inputdata-parser
-The project contains 2 functions: Decode And Encode
+The project uses springboot and thymeleaf to build the evm input data parser tool. It mainly contains 2 functions: Decode And Encode
 1. Decode
    Making use of smart contract ABI and Input data to parse out the called functions details including method name and parameters' value.
 2. Encode
