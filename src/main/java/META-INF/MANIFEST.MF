@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Main-Class: org.lb.evm.data.parser.EvmDataParserApplication
+Class-Path: spring-expression-6.0.4.jar jackson-datatype-jdk8-2.14.1.jar
+  spring-core-6.0.4.jar log4j-to-slf4j-2.19.0.jar unbescape-1.1.6.RELEAS
+ E.jar spring-context-6.0.4.jar log4j-api-2.19.0.jar micrometer-commons-
+ 1.10.3.jar thymeleaf-spring6-3.1.1.RELEASE.jar spring-boot-starter-tomc
+ at-3.0.2.jar commons-lang3-3.12.0.jar spring-beans-6.0.4.jar spring-boo
+ t-starter-thymeleaf-3.0.2.jar commons-collections4-4.4.jar spring-boot-
+ 3.0.2.jar slf4j-api-2.0.6.jar spring-boot-starter-3.0.2.jar jackson-dat
+ atype-jsr310-2.14.1.jar spring-aop-6.0.4.jar tomcat-embed-websocket-10.
+ 1.5.jar attoparser-2.0.6.RELEASE.jar jackson-databind-2.14.1.jar logbac
+ k-classic-1.4.5.jar spring-boot-starter-web-3.0.2.jar jackson-annotatio
+ ns-2.14.1.jar jackson-module-parameter-names-2.14.1.jar lombok-1.18.24.
+ jar tomcat-embed-core-10.1.5.jar jul-to-slf4j-2.0.6.jar spring-web-6.0.
+ 4.jar jackson-core-2.14.1.jar spring-webmvc-6.0.4.jar spring-boot-start
+ er-json-3.0.2.jar jakarta.annotation-api-2.1.1.jar evm-abi-decoder-0.0.
+ 8.jar spring-boot-starter-logging-3.0.2.jar micrometer-observation-1.10
+ .3.jar snakeyaml-1.33.jar logback-core-1.4.5.jar spring-jcl-6.0.4.jar b
+ cprov-jdk18on-1.75.jar tomcat-embed-el-10.1.5.jar thymeleaf-3.1.1.RELEA
+ SE.jar spring-boot-autoconfigure-3.0.2.jar
+

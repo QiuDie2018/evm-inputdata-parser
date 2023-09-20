@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Ethereum Smart Contract Parser</title>
+    <style type="text/css">
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .column {
+            display: inline-block;
+            width: 30%;
+            padding: 10px;
+        }
+        .actions {
+            height: 30px;
+        }
+        .middle-button {
+            width: 100px;
+            height: 30px;
+            margin-left: 600px;
+        }
+        .right-button {
+            width: 100px;
+            height: 30px;
+            margin-right: 400px;
+        }
+    </style>
+    <script type="text/javascript">
+        function decode() {
+            const abi = document.getElementById("abi").value;
+            const inputData = document.getElementById("inputData").value;
+
+            if(abi == null || abi == "" ) {
+                alert("ABI are required");
+                return;
+            }
+            if(inputData == null || inputData == ""){
+                alert("Method Info are blank at the same time");
+                return;
+            }
+            console.log("to send abi and input data");
+            document.forms["parser"].method = "post";
+            document.forms["parser"].action = "/decode";
+
+            document.forms["parser"].submit();
+        }
+
+        function encode() {
+            var abi = document.getElementById("abi").value;
+            var methodInfo = document.getElementById("methodInfo").value;
+            if(abi == null || abi == "" ) {
+                alert("ABI is required");
+                return;
+            }
+            if(methodInfo == null || methodInfo == ""){
+                alert("Input data is required");
+                return;
+            }
+            console.log("methodInfo:" + methodInfo);
+
+            document.forms["parser"].action = "/encode";
+            document.forms["parser"].method = "post";
+            document.forms["parser"].submit();
+        }
+    </script>
+</head>
+<body>
+<div>
+    <h1>Ethereum Data Parser</h1>
+    <!--<div class="actions">
+        <button id="decode" th:onclick="decode()">Decode</button>
+    </div>-->
+    <!--th:action="@{/decode}" -->
+    <div class="container">
+        <div class="actions" >
+            <button id="decode" class="middle-button" onclick="decode()">decode</button>
+        </div>
+        <div class="actions" >
+            <button id="encode" class="right-button" onclick="encode()">encode</button>
+        </div>
+    </div>
+    <!--method="post" th:action="@{/decode}" -->
+    <form id="parser" class="container" th:object="${decodeParam}">
+
+        <div class="column">
+            <div class="actions"></div>
+            <label>ABI</label>
+            <br/>
+            <textarea id="abi" cols="60" rows="35" placeholder="ABI" th:field="*{abi}"></textarea>
+        </div>
+        <div class="column">
+            <div class="actions"></div>
+            <label>Input Data</label>
+            <br/>
+            <textarea id="inputData" cols="60" rows="35" placeholder="Input Data" th:field="*{inputData}"></textarea>
+        </div>
+        <div class="column">
+            <div class="actions"></div>
+            <label>Method Info</label>
+            <br/>
+            <textarea id="methodInfo" cols="60" rows="35" placeholder="Method Info" th:field="*{methodInfo}"></textarea>
+        </div>
+
+        <!--<div class="actions">
+            <input type="submit" value="Decode"/>
+        </div>-->
+    </form>
+
+</div>
+</body>
+</html>
+
